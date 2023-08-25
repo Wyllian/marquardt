@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<!-- Título -->
+	<title>{{ titulo }}</title>
+	<!-- <link rel="shortcut icon" href="" type="image/x-icon"> -->
+	<!-- Intranet -->
+	<link href="{% static 'css/myprojects.css' %}" rel="stylesheet" type="text/css" />
+	<!-- Custom Extras -->
+	{% block extra_css %}{% endblock %}
+</head>
+
+<body class="my_site">
+	<div class="nav_hidden"></div>
+
+	<!-- Your Page Content Here -->
+	{% block conteudo %}{% endblock %}
+
+	<div class="my_clear"></div>
+
+	<!-- Main Footer -->
+	<footer class="my_rodape">
+		<div class="row">
+			<div class='col-md-8 my_copyright'></div>
+			<!-- To the right -->
+			<div class="col-md-4 my_wylms">
+				<img src="{% static 'img/wolf_30px_br.png' %}">
+			</div>
+		</div>
+	</footer>
+
+	<!-- REQUIRED JS SCRIPTS -->
+	{% block extra_js %}{% endblock %}
+
+</body>
+</html>
