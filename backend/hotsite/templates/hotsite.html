@@ -7,11 +7,12 @@
 	<!-- Título -->
 	<title>{{ titulo }}</title>
 	<!-- <link rel="shortcut icon" href="" type="image/x-icon"> -->
+	<link href="{% static 'css/marquardt.css' %}" rel="stylesheet" type="text/css" />
 	<!-- Custom Extras -->
 	{% block extra_css %}{% endblock %}
 </head>
 
-<body class="my_site">
+<body>
 	<!-- Your Page Content Here -->
 	{% block conteudo %}{% endblock %}
 
